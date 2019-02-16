@@ -1,0 +1,52 @@
+<html>
+<body style="font-size: 20px;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol">
+<h1>Tandem Repeats</h1>
+<div style="margin-bottom: 10px;">
+    <textarea id="input" cols="100" rows="5"></textarea>
+</div>
+<div style="margin-bottom: 20px;">
+    <input type="button" value="Submit" id="btn-submit">
+</div>
+<div style="margin-bottom: 20px;width: auto;word-break: break-word; "><b>Result(with hilight):</b><br/>
+    <span id="result"></span>
+</div>
+<h3>JSON</h3>
+<pre>
+</pre>
+<script src="../lib/jquery/jquery-3.3.1.min.js"></script>
+<script src="../app/tandem.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+
+        $('#btn-submit').click(function () {
+
+            //get input from textarea
+            var str = $('#input').val();
+
+            if(result = tandem(str)){
+                //Call tandem function return result with json
+                var jsonObj = JSON.parse(result);
+
+                //convert json to pretty form for display
+                var jsonPretty = JSON.stringify(jsonObj, null, '\t');
+
+                //Display json on HTML
+                $("pre").text(jsonPretty);
+
+                //hilight substring that we found.
+                $('#result').html(tandemHilight(str));
+            }
+            else{
+                alert();
+            }
+
+
+        });
+
+    });
+
+
+</script>
+</body>
+</html>
