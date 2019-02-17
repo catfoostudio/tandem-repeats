@@ -23,7 +23,7 @@ git clone git://github.com/theerapatkij/tandem-repeats.git
 If you don't have git or don't want to use it, please download zip file then unzip to your computer.
 
 
-##Run & Usage
+## Run & Usage
 
 First, open HTML file name `app/tandem-repeat.html` with your browser. 
 
