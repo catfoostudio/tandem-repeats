@@ -1,6 +1,6 @@
 # Tandem Repeats
 
-This function will detect substring pattern of 4 letters ('A','C','G','T') when the letters repeat.
+This function will detect substring patterns of 4 letters ('A','C','G','T') when the letters repeat.
 
 ## Getting Started
 
@@ -8,10 +8,9 @@ This function will detect substring pattern of 4 letters ('A','C','G','T') when 
 
 You need **jQuery** to run two functions in `app/tandem.js`. 
 
-[jQuery](https://jquery.com/download/)  This link will take you to download and how to install jQuery.
+If you want to test/demo this project only I provide the jQuery in `lib/jquery` folder. You don't need to install jQuery to run test.
 
-Demo provided jQuery in `lib/jquery` folder. You don't need to install jQuery again to run.
-
+[jQuery](https://jquery.com/download/)  This link will take you to download and install jQuery.
 
 ### Installation
 
@@ -21,17 +20,16 @@ Clone a copy git repo by running:
 git clone git://github.com/theerapatkij/tandem-repeats.git
 ```
 
-If you don't have git or don't want to use it. Just download zip file then unzip to your computer.
+If you don't have git or don't want to use it, please download zip file then unzip to your computer.
 
 
 ##Run & Usage
 
-First, open a html file name `app/tandem-repeat.html` with your browser. 
+First, open HTML file name `app/tandem-repeat.html` with your browser. 
 
-Put string input in textarea and then click Submit button.
+Input string and then click the Submit button.
 
-Result will display below in two forms input with hilight and JSON.
-
+The result will display below in two forms. The string with highlight tandem repeat patterns and JSON.
 
 ## Output given test strings
 
@@ -248,23 +246,19 @@ Result of third test:
 
 ## Tests
 
-I'm also wrote a automated tests with [Mocha](https://mochajs.org/) on HTML file. You can run it by follow below Instruction.
+I wrote an automated tests with [Mocha](https://mochajs.org/) on HTML file. You can run by follow below instruction.
 
 ### Run test
-Open file `tests/tandem-test.html` in browser. Then you will see a functions name and lists of Test case.
+Open file `tests/tandem-test.html` in browser. You will see a functions name and lists of the test case.
 
-If you want to edit Test case. Just open `tests/tandem.test.js`.
-
+If you want to edit Test cases. Just open `tests/tandem.test.js`.
 
 
 ## Choices, limitations and algorithm performance
 
-Tandem repeat function that I developed. It catch every substring only include 4 letters 'A', 'C', 'G', 'T' in range 3-10 letters.
-When some parts of input string match criteria. All the letters that repeat until it not include the position of start substrings(index) will collect then continue to seek a new substring that will repeat a pattern again.
- 
+Tandem repeat function that I developed will catch every substring that include 4 letters 'A', 'C', 'G', 'T' with repeat pattern in range 3-10 letters.
 
-I chose javascript in HTML file with **Regular expressions** algorithm for this work. Because function javascript on HTML It's easy run and test to whom that I don't know their environment and Regular expressions helps my code a less complexity and easy to maintain. 
+I choose javascript in HTML file for this work because javascript function on HTML is easy run and test. For whom that I don't know their environment I also choose **Regular expressions** in my code less complex and easy to maintain. 
 
-Maybe other algorithm such as **while loop** with **String operations**. It will be faster than Regular expressions. But If a problem grow bigger, very complex or you need to change something. You'll spend much more time to refactoring it.
-Regular expressions can do complicated work with reasonably priced in my opinion. 
-
+Maybe other algorithm such as **while loop** with **String operations** is faster than Regular expressions. But If a problem grow bigger, very complex or you need to change something. You have to spend more time to refactoring it.
+Although Regular expressions are complicated but I think it is reasonable to use. 
