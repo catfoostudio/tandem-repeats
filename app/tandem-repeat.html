@@ -24,7 +24,7 @@
             //get input from textarea
             var str = $('#input').val();
 
-            if(result = tandem(str)){
+            if(result = tandem(str.trim())){
                 //Call tandem function return result with json
                 var jsonObj = JSON.parse(result);
 
@@ -38,7 +38,7 @@
                 $('#result').html(tandemHilight(str));
             }
             else{
-                alert();
+                $('#result').text('input not found.');
             }
 
 
